@@ -1,0 +1,36 @@
+$primarycolor: #FAEDE6;
+$darkcolor: #160F29;
+$fontfamily: 'Open Sans', sans-serif;
+
+.navbar {
+    z-index: 1;
+    width: 100vw;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $primarycolor;
+    display: flex;
+    align-items: center;
+    color: $darkcolor;
+    font-family: $fontfamily;
+}
+
+h1 {
+    margin-left: 1rem;
+}
+
+.spacer {
+    flex: 1;
+}
+
+a{
+    color: $darkcolor;
+    text-decoration: none;
+}
+
+.none {
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
+}

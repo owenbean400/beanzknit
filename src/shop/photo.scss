@@ -1,0 +1,67 @@
+@import '../variables.scss';
+
+$width-box: 300px;
+
+.shop-icon-container {
+    width: $width-box;
+    height: auto;
+    background-color: $secondarycolor;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    margin: 32px;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+        -webkit-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.1);
+        -moz-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.1);
+        box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.1);
+    }
+
+    .img-container{
+        width: $width-box;
+        height: 200px;
+        overflow: hidden;
+
+
+        img {
+            height: 200px;
+            width: $width-box;
+            position: relative;
+            object-fit: cover;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        .buy-pattern-container{
+            margin-top: -108px;
+            transition: margin 0.3s ease-out;
+
+            h5{
+                position: relative;
+                background-color: $secondarycolor;
+                height: 36px;
+                width: 110%;
+                margin-left: -5%;
+                margin-bottom: 0;
+                border: $thirdcolor 1px solid;
+                margin-top: -1px;
+                padding-top: 14px;
+                cursor: pointer;
+                &:hover{
+                    background-color: $thirdcolor;
+                }
+            }
+        }
+    }
+
+    h4{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 1rem;
+    }
+}

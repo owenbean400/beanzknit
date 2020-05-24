@@ -1,0 +1,259 @@
+@import 'variables';
+
+body{
+    background-color: $primarycolor;
+}
+
+//Navbar Component
+    .navbar {
+        width: 100vw;
+        height: 64px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: $primarycolor;
+        display: flex;
+        align-items: center;
+        color: $darkcolor;
+        font-family: $fontfamily;
+        border-bottom: 1px solid $thirdcolor;
+
+        h1 {
+            margin-left: 1rem;
+        }
+
+        .spacer {
+            flex: 1;
+        }
+
+    //Navlinks Component
+        .navlinks{
+            ul {
+                padding: 0;
+                margin: 0 6rem 0 0;
+                list-style-type: none;
+                grid-template-columns: auto auto auto;
+                grid-gap: 6rem;
+
+                li {
+                    color: #160F29;
+                    font-size: 1.5rem;
+                    width: auto;
+                    cursor: pointer;
+                    &:hover{
+                        color: black;
+                        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
+                    }
+                }
+            }
+        }
+    
+    //Hamburger Component
+        .hamburger{
+            $hamburgerBoxSize: 32px;
+            width: $hamburgerBoxSize;
+            height: $hamburgerBoxSize;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-right: 1rem;
+            cursor: pointer;
+
+            div{
+                width: $hamburgerBoxSize;
+                height: 4px;
+                background-color: black;
+            }
+        }
+
+    //Sidebar Component
+        .sidebar{
+            max-width: 400px;
+            width: 75%;
+            height: 100%;
+            background-color: #FAEDE6;
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            right: 0;
+            box-shadow: 1px 10px 20px rgba(0,0,0,0.75);
+            transition: transform 0.3s ease-out;
+
+            .sidebar-header{
+                display: flex;
+                align-items: center;
+
+                h1{
+                    padding: 0 0 0 0.75rem;
+                    margin-top: 0.75rem;
+                }
+
+                .cross-holder{
+                    width: 32px;
+                    height: 32px;
+                    border-radius: 100%;
+                    transform: translate(-16px,-4px) rotate(45deg);
+                    cursor: pointer;
+
+                    .crossbar{
+                        height: 4px;
+                        width: 32px;
+                        background-color: $darkcolor;
+                    }
+
+                    #rightCross{
+                        transform: translate(0,14px);
+                    }
+
+                    #leftCross{
+                        transform: rotate(90deg) translate(10px,0px);
+                    }
+                }
+            }
+
+            ul{
+                font-size: 1.5rem;
+                padding-left: 2rem;
+                list-style-type: none;
+
+                li{
+                    padding: 1rem 0;
+                    transition: translate 10s;
+                    transition-delay: 2s;
+                }
+            }
+        }
+
+        .backdrop{
+            background-color: rgb(0,0,0);
+            height: 100000px;
+            width: 100%;
+            position: fixed;
+            transition: opacity 0.75s;
+            cursor: pointer;
+        }
+
+    }
+
+//Content Component
+    main{
+        background-color: $primarycolor;
+        padding: 0;
+        font-family: $fontfamily;
+        
+        }
+
+
+       
+        .header{
+            width: 100%;
+            height: 66vh;
+            background-image: url(scarfphoto/queendiamondstexture.png);
+            background-attachment: fixed;
+            background-position: center;
+            text-align: center;
+            color: $primarycolor;
+            background-blend-mode: multiply;
+            text-shadow: 4px 4px 8px black;
+
+            h1{
+                @media screen and (min-width: 769px){
+                    font-size: 6rem;
+                    padding-top: 80px;
+                }
+                @media screen and (max-width: 768px){
+                    font-size: 4rem;
+                    padding-top: 64px;
+                }
+            }
+
+            p{
+                @media screen and (min-width: 769px){
+                    font-size: 3rem;
+                }
+                @media screen and (max-width: 768px){
+                    font-size: 2rem;
+                    padding: 0 32px;
+                }
+            }
+        }
+
+//Footer Component
+    footer{
+        background-color: $secondarycolor;
+        font-family: $fontfamily;
+        clear: both;
+        padding-top: 32px;
+
+
+        .socialmedias{
+            width: 300px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+
+            .socialmedia-link{
+
+                .fa{
+                    padding: 20px;
+                    font-size: 30px;
+                    height: 30px;
+                    width: 30px;
+                    text-align: center;
+                    text-decoration: none;
+                    margin: 5px 2px;
+                    border-radius: 100%;
+                    color: $darkcolor;
+                }
+        }
+        
+        }
+
+        .footer-links{
+            display: grid;
+
+            @media screen and (min-width: 992px){
+                grid-template-columns: repeat(3, 320px);
+                grid-template-rows: auto;
+                justify-content: space-around;
+            }
+
+            @media screen and (max-width: 992px){
+                grid-template-columns: 320px;
+                grid-template-rows: repeat(3, auto);
+                justify-content: space-around;
+            }
+
+            ul{
+                list-style-type: none;
+                text-align: center;
+                padding: 0 0 32px 0;
+                width: 320px;
+
+                .linktitle{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    padding-bottom: 16px;
+                    cursor: default;
+                }
+    
+                a{
+                    color: $darkcolor;
+                    text-decoration: none;
+                    &:hover{
+                        text-decoration: underline dashed;
+                    }
+
+                    li{
+                        padding: 8px 0;
+                    }
+                }
+            }
+        }
+
+        .copyrighttag{
+            font-size: .75rem;
+            padding: 0 0 1rem 1rem;
+            margin: 0;
+        }
+        
+    }

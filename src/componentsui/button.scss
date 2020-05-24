@@ -1,0 +1,30 @@
+@import '../variables.scss';
+
+button{
+    background-color: $secondarycolor;
+    color: $darkcolor;
+    width: 200px;
+    height: 80px;
+    border: none;
+    cursor: pointer;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    &:hover {
+        border-top: 2px whitesmoke solid;
+        border-left: 2px whitesmoke solid;
+        border-bottom: 2px $thirdcolor solid;
+        border-right: 2px $thirdcolor solid;
+        -webkit-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.2);
+        -moz-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.2);
+        box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.2);
+    }
+    &:active{
+        border-bottom: 2px whitesmoke solid;
+        border-right: 2px whitesmoke solid;
+        border-top: 2px $thirdcolor solid;
+        border-left: 2px $thirdcolor solid;
+        -webkit-box-shadow: inset 4px 4px 15px -5px rgba(0,0,0,0.1);
+        -moz-box-shadow: inset 4px 4px 15px -5px rgba(0,0,0,0.1);
+        box-shadow: inset 4px 4px 15px -5px rgba(0,0,0,0.1);
+    }
+}

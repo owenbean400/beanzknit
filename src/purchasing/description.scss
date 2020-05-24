@@ -1,0 +1,57 @@
+@import '../variables.scss';
+
+.description{
+    @media screen and (min-width: 992px){
+        width: 420px;
+        padding-left: 2rem;
+        float: left;
+    }
+    @media screen and (max-width: 992px){
+        width: 92%;
+        text-align: center;
+        clear: both;
+        padding: 0 4%;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin: 0 0 1rem 0;
+    }
+    
+    h5{
+        font-size: 1.5rem;
+        margin: 0;
+    }
+    
+    p{
+        font-size: 1rem;
+        margin: 2rem 0;
+    }
+    
+    .button-container{
+
+        display: grid;
+        @media screen and (min-width: 768px){
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
+        }
+        @media screen and (max-width: 768px){
+            justify-content: center;
+            grid-template-columns: auto;
+            grid-template-rows: auto auto;
+            grid-gap: 2rem;
+        }
+        @media screen and (min-width: 992px){
+            justify-content: space-between;
+        }
+        @media screen and (max-width: 992px) and (min-width: 768px){
+            justify-content: space-around;
+        }
+        
+
+        button{
+            margin: 0;
+        }
+    }
+
+}
