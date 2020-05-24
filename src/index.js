@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {
   BrowserRouter as Router,
+  HashRouter,
   Switch,
   Route,
   Link,
@@ -45,7 +46,7 @@ class App extends React.Component {
   render(){
     return (
       <div>
-        <Router>
+        <HashRouter>
         <ScrollToTop />
         <NavBar logo="Beanz" style={{height: 'auto'}}/>
         <Switch>
@@ -65,7 +66,7 @@ class App extends React.Component {
         <Route path ="/purchase/three-cable"> <Purchase title="Three Cable" priceBuy="Item: $129.99" pricePattern="Pattern: $1.99" image={ThreeCable} description=""/> </Route>
         </Switch>
         <Footer />
-        </Router>
+        </HashRouter>
       </div>
 
     )
