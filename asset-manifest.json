@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/beanzknit/static/css/main.364a6c14.chunk.css",
+    "main.js": "/beanzknit/static/js/main.5f092da3.chunk.js",
+    "main.js.map": "/beanzknit/static/js/main.5f092da3.chunk.js.map",
+    "runtime-main.js": "/beanzknit/static/js/runtime-main.3381c704.js",
+    "runtime-main.js.map": "/beanzknit/static/js/runtime-main.3381c704.js.map",
+    "static/js/2.df425030.chunk.js": "/beanzknit/static/js/2.df425030.chunk.js",
+    "static/js/2.df425030.chunk.js.map": "/beanzknit/static/js/2.df425030.chunk.js.map",
+    "index.html": "/beanzknit/index.html",
+    "precache-manifest.f9362698f9c1e68acd888a403f5a3131.js": "/beanzknit/precache-manifest.f9362698f9c1e68acd888a403f5a3131.js",
+    "service-worker.js": "/beanzknit/service-worker.js",
+    "static/css/main.364a6c14.chunk.css.map": "/beanzknit/static/css/main.364a6c14.chunk.css.map",
+    "static/js/2.df425030.chunk.js.LICENSE.txt": "/beanzknit/static/js/2.df425030.chunk.js.LICENSE.txt",
+    "static/media/bw_blossom_scarf.jpg": "/beanzknit/static/media/bw_blossom_scarf.4a09192f.jpg",
+    "static/media/facemask.jpg": "/beanzknit/static/media/facemask.9d327c5e.jpg",
+    "static/media/linedownhat.jpg": "/beanzknit/static/media/linedownhat.4934e1b6.jpg",
+    "static/media/mixturehat.jpg": "/beanzknit/static/media/mixturehat.cca179b7.jpg",
+    "static/media/owenbeanhat.jpg": "/beanzknit/static/media/owenbeanhat.6c48e536.jpg",
+    "static/media/pinkiescarf.jpg": "/beanzknit/static/media/pinkiescarf.45ac6491.jpg",
+    "static/media/queen_of_diamonds_scarf.jpg": "/beanzknit/static/media/queen_of_diamonds_scarf.bee57415.jpg",
+    "static/media/index.scss": "/beanzknit/static/media/queendiamondstexture.d2d87548.png",
+    "static/media/ribbing_scarf.jpg": "/beanzknit/static/media/ribbing_scarf.0922d303.jpg",
+    "static/media/splitwayz_scarf.jpg": "/beanzknit/static/media/splitwayz_scarf.3cabd281.jpg",
+    "static/media/summer_fade_scarf.jpeg": "/beanzknit/static/media/summer_fade_scarf.d6621fc0.jpeg",
+    "static/media/three_cables_scarf.jpeg": "/beanzknit/static/media/three_cables_scarf.5d9ae0b5.jpeg",
+    "static/media/wallet.jpg": "/beanzknit/static/media/wallet.2697024e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3381c704.js",
+    "static/js/2.df425030.chunk.js",
+    "static/css/main.364a6c14.chunk.css",
+    "static/js/main.5f092da3.chunk.js"
+  ]
+}
