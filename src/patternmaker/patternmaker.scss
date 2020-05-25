@@ -1,0 +1,37 @@
+@import '../variables.scss';
+
+main{
+    margin: 128px 0;
+
+    .boxes{
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        border: 1px black solid;
+        cursor: pointer;
+    }
+}
+
+@media print{
+    .navbar{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .color-picker{
+        display: none;
+    }
+
+    .add-subtract-boxes{
+        display: none;
+    }
+
+    .boxes{
+        display: static;
+        -webkit-print-color-adjust: exact; 
+    }
+
+}

@@ -14,6 +14,7 @@ import NavBar from './navbar/navbar.js';
 import Content from './content/content.js';
 import Shop from './shop/shop.js'
 import Footer from './footer/footer.js';
+import PatternMaker from './patternmaker/patternmaker.js';
 import Purchase from './purchasing/purchase.js';
 import BwBlosson from './scarfphoto/bw_blossom_scarf.jpg';
 import FaceMask from './scarfphoto/facemask.jpg';
@@ -44,8 +45,13 @@ class App extends React.Component {
 
 
   render(){
+
+    const AllStyle ={
+      cursor: 'default'
+    }
+
     return (
-      <div>
+      <div style={AllStyle}>
         <HashRouter>
         <ScrollToTop />
         <NavBar logo="Beanz" style={{height: 'auto'}}/>
@@ -64,6 +70,7 @@ class App extends React.Component {
         <Route path ="/purchase/pinkie"> <Purchase title="Pinkie Scarf" priceBuy="Item: $129.99" pricePattern="Pattern: $1.99" image={PinkieScarf} description=""/> </Route>
         <Route path ="/purchase/redribbing"> <Purchase title="Red Ribbing Scarf" priceBuy="Item: $129.99" pricePattern="Pattern: $1.99" image={RedRibbingScarf} description=""/> </Route>
         <Route path ="/purchase/three-cable"> <Purchase title="Three Cable" priceBuy="Item: $129.99" pricePattern="Pattern: $1.99" image={ThreeCable} description=""/> </Route>
+        <Route path="/pattern-creator"> <PatternMaker title="hey"/> </Route>
         </Switch>
         <Footer />
         </HashRouter>
