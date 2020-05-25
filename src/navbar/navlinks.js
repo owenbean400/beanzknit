@@ -37,6 +37,7 @@ class NavLinks extends React.Component{
             <div className="navlinks">
                 <ul style={this.state.LinkList.ul}>
                     <Link to="/shop"><li>Shop</li></Link>
+                    <Link to="/pattern-creator"><li>Pixel Art</li></Link>
                     <Link to="/blog"><li>Blog</li></Link>
                     <Link to="/about"><li>About</li></Link>
                 </ul>

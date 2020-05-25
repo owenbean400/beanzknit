@@ -13,7 +13,7 @@ class Sidebar extends React.Component {
                     },
                     li:{
                         transform: this.props.liMove,
-                        transition: 'transform 1s ease-out'
+                        transition: 'transform 0.5s ease-out'
                     }
             },
             hiding: this.props.hideSidebar,
@@ -31,7 +31,7 @@ class Sidebar extends React.Component {
                     },
                     li:{
                         transform: this.props.liMove,
-                        transition: 'transform 1s ease-out'
+                        transition: 'transform 0.5s ease-out'
                     }
                 }
             }));
@@ -48,6 +48,7 @@ class Sidebar extends React.Component {
                     </div>
                     <ul>
                         <Link to="/shop"><li style={this.state.css.li}>Shop</li></Link>
+                        <Link to="/pattern-creator"><li style={this.state.css.li}>Pixel Art</li></Link>
                         <Link to="/blog"><li style={this.state.css.li}>Blog</li></Link>
                         <Link to="/about"><li style={this.state.css.li}>About</li></Link>
                     </ul>

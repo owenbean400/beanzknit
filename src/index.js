@@ -16,6 +16,7 @@ import Shop from './shop/shop.js'
 import Footer from './footer/footer.js';
 import PatternMaker from './patternmaker/patternmaker.js';
 import Purchase from './purchasing/purchase.js';
+import ErrorPage from './404/404.js'
 import BwBlosson from './scarfphoto/bw_blossom_scarf.jpg';
 import FaceMask from './scarfphoto/facemask.jpg';
 import LineDownHat from './scarfphoto/linedownhat.jpg';
@@ -71,6 +72,7 @@ class App extends React.Component {
         <Route path ="/purchase/redribbing"> <Purchase title="Red Ribbing Scarf" priceBuy="Item: $129.99" pricePattern="Pattern: $1.99" image={RedRibbingScarf} description=""/> </Route>
         <Route path ="/purchase/three-cable"> <Purchase title="Three Cable" priceBuy="Item: $129.99" pricePattern="Pattern: $1.99" image={ThreeCable} description=""/> </Route>
         <Route path="/pattern-creator"> <PatternMaker title="hey"/> </Route>
+        <Route path="/"> <ErrorPage/> </Route>
         </Switch>
         <Footer />
         </HashRouter>

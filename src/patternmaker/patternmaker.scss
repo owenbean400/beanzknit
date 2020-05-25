@@ -1,16 +1,117 @@
 @import '../variables.scss';
 
-main{
-    margin: 128px 0;
+@media screen{
+    .pattern-maker-main{
+        margin: 128px 0;
 
-    .boxes{
-        height: 50px;
-        width: 50px;
-        text-align: center;
-        border: 1px black solid;
-        cursor: pointer;
+        .print-title{
+            display: none;
+        }
+    
+        .boxes{
+            height: 30px;
+            width: 30px;
+            text-align: center;
+            border: 1px black solid;
+            cursor: pointer;
+        }
+        
+        .block-picker{
+            margin: auto auto 2rem auto;
+            
+        }
+    
+        .color-picker-container{
+            z-index: 1;
+            @media screen and (min-width: 768px) and (max-width: 992px){
+                grid-row-start: 2;
+                grid-row-end: 3;
+                grid-column-start: 1;
+                grid-column-end: 3;
+                justify-items: center;
+            }
+            @media screen and (max-width: 768px){
+                grid-row-start: 3;
+                grid-row-end: 4;
+    
+            }
+            h2{
+                text-align: center;
+            }
+        }
+    
+        .creating-pattern-actions{
+            display: grid;
+            @media screen and (min-width: 992px){
+                grid-template-rows: auto;
+                grid-template-columns: auto auto auto;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px){
+                grid-template-rows: auto auto;
+                grid-template-columns: auto auto;
+            }
+            @media screen and (max-width: 768px){
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                grid-gap: 1rem;
+            }
+    
+            .add-remove-buttons{
+                display: grid;
+                grid-template-columns: 50px 100px 50px;
+                grid-template-rows: auto auto;
+                justify-items: center;
+                justify-content: center;
+                align-items: center;
+    
+                h2{
+                    grid-column-start: 1;
+                    grid-column-end: 4;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+    
+            h1{
+                margin: 0;
+                padding: 0;
+            }
+    
+            p{
+                box-sizing: border-box;
+                width: 50px;
+                height: 50px;
+                background-color: $secondarycolor;
+                border-radius: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                font-weight: 900;
+                cursor: pointer;
+                &:hover {
+                    border-top: 2px whitesmoke solid;
+                    border-left: 2px whitesmoke solid;
+                    border-bottom: 2px $thirdcolor solid;
+                    border-right: 2px $thirdcolor solid;
+                    -webkit-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.2);
+                    -moz-box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.2);
+                    box-shadow: 4px 4px 15px -5px rgba(0,0,0,0.2);
+                }
+                &:active{
+                    border-bottom: 2px whitesmoke solid;
+                    border-right: 2px whitesmoke solid;
+                    border-top: 2px $thirdcolor solid;
+                    border-left: 2px $thirdcolor solid;
+                    -webkit-box-shadow: inset 4px 4px 15px -5px rgba(0,0,0,0.1);
+                    -moz-box-shadow: inset 4px 4px 15px -5px rgba(0,0,0,0.1);
+                    box-shadow: inset 4px 4px 15px -5px rgba(0,0,0,0.1);
+                }
+            }
+        }
     }
 }
+
 
 @media print{
     .navbar{
@@ -20,18 +121,36 @@ main{
     footer{
         display: none;
     }
-
+    .color-picker-container{
+        display: none;
+    }
+    .creating-pattern-actions{
+        display: none;
+    }
     .color-picker{
         display: none;
     }
-
-    .add-subtract-boxes{
+    .add-remove-buttons{
         display: none;
     }
 
     .boxes{
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        border: 1px black solid;
+        cursor: pointer;
         display: static;
         -webkit-print-color-adjust: exact; 
     }
 
+    .gridboxes{
+        margin-top: 64px;
+    }
+
+    .print-title{
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
 }

@@ -1,145 +1,22 @@
 @import 'variables';
 
+
+
+a{
+    text-decoration: none;
+    color: initial;
+}
+
 body{
     background-color: $primarycolor;
 }
-
-//Navbar Component
-    .navbar {
-        width: 100vw;
-        height: 64px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        background-color: $primarycolor;
-        display: flex;
-        align-items: center;
-        color: $darkcolor;
-        font-family: $fontfamily;
-        border-bottom: 1px solid $thirdcolor;
-
-        h1 {
-            margin-left: 1rem;
-        }
-
-        .spacer {
-            flex: 1;
-        }
-
-    //Navlinks Component
-        .navlinks{
-            ul {
-                padding: 0;
-                margin: 0 6rem 0 0;
-                list-style-type: none;
-                grid-template-columns: auto auto auto;
-                grid-gap: 6rem;
-
-                li {
-                    color: #160F29;
-                    font-size: 1.5rem;
-                    width: auto;
-                    cursor: pointer;
-                    &:hover{
-                        color: black;
-                        text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
-                    }
-                }
-            }
-        }
-    
-    //Hamburger Component
-        .hamburger{
-            $hamburgerBoxSize: 32px;
-            width: $hamburgerBoxSize;
-            height: $hamburgerBoxSize;
-            flex-direction: column;
-            justify-content: space-around;
-            margin-right: 1rem;
-            cursor: pointer;
-
-            div{
-                width: $hamburgerBoxSize;
-                height: 4px;
-                background-color: black;
-            }
-        }
-
-    //Sidebar Component
-        .sidebar{
-            max-width: 400px;
-            width: 75%;
-            height: 100%;
-            background-color: #FAEDE6;
-            position: fixed;
-            z-index: 2;
-            top: 0;
-            right: 0;
-            box-shadow: 1px 10px 20px rgba(0,0,0,0.75);
-            transition: transform 0.3s ease-out;
-
-            .sidebar-header{
-                display: flex;
-                align-items: center;
-
-                h1{
-                    padding: 0 0 0 0.75rem;
-                    margin-top: 0.75rem;
-                }
-
-                .cross-holder{
-                    width: 32px;
-                    height: 32px;
-                    border-radius: 100%;
-                    transform: translate(-16px,-4px) rotate(45deg);
-                    cursor: pointer;
-
-                    .crossbar{
-                        height: 4px;
-                        width: 32px;
-                        background-color: $darkcolor;
-                    }
-
-                    #rightCross{
-                        transform: translate(0,14px);
-                    }
-
-                    #leftCross{
-                        transform: rotate(90deg) translate(10px,0px);
-                    }
-                }
-            }
-
-            ul{
-                font-size: 1.5rem;
-                padding-left: 2rem;
-                list-style-type: none;
-
-                li{
-                    padding: 1rem 0;
-                    transition: translate 10s;
-                    transition-delay: 2s;
-                }
-            }
-        }
-
-        .backdrop{
-            background-color: rgb(0,0,0);
-            height: 100000px;
-            width: 100%;
-            position: fixed;
-            transition: opacity 0.75s;
-            cursor: pointer;
-        }
-
-    }
 
 //Content Component
     main{
         background-color: $primarycolor;
         padding: 0;
         font-family: $fontfamily;
-        
+        z-index: 0;
         }
 
 

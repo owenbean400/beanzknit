@@ -1,26 +1,28 @@
 import React from 'react';
 import GridBox from './gridbox.js';
-import {GithubPicker} from 'react-color';
+import { BlockPicker } from 'react-color';
 import './patternmaker.scss';
+
+const boxSize = '30px'
 
 class PatternMaker extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            wide: 10,
+            wide: 5,
             hi: 5,
         }
         this.state = {
-            wide: 10,
+            wide: 5,
             hi: 5,
             gridCss: {
                 display: 'grid',
                 justifyContent: 'center',
-                gridTemplateRows: `repeat(${this.state.hi}, 50px)`,
-                gridTemplateColumns: `repeat(${this.state.wide}, 50px)`
+                gridTemplateRows: `repeat(${this.state.hi}, ${boxSize})`,
+                gridTemplateColumns: `repeat(${this.state.wide}, ${boxSize})`
             },
             color: 'orange',
-            background: '#fff'
+            background1: '#fff'
         }
         this.addWidth = this.addWidth.bind(this);
         this.removeWidth = this.removeWidth.bind(this);
@@ -37,8 +39,8 @@ class PatternMaker extends React.Component{
             gridCss: {
                 display: 'grid',
                 justifyContent: 'center',
-                gridTemplateRows: `repeat(${heightColumn}, 50px)`,
-                gridTemplateColumns: `repeat(${widthRow}, 50px)`
+                gridTemplateRows: `repeat(${heightColumn}, ${boxSize})`,
+                gridTemplateColumns: `repeat(${widthRow}, ${boxSize})`
             },
             color: this.state.color
         }));
@@ -53,8 +55,8 @@ class PatternMaker extends React.Component{
             gridCss: {
                 display: 'grid',
                 justifyContent: 'center',
-                gridTemplateRows: `repeat(${heightColumn}, 50px)`,
-                gridTemplateColumns: `repeat(${widthRow}, 50px)`
+                gridTemplateRows: `repeat(${heightColumn}, ${boxSize})`,
+                gridTemplateColumns: `repeat(${widthRow}, ${boxSize})`
             },
             color: this.state.color
         }));
@@ -69,8 +71,8 @@ class PatternMaker extends React.Component{
             gridCss: {
                 display: 'grid',
                 justifyContent: 'center',
-                gridTemplateRows: `repeat(${heightColumn}, 50px)`,
-                gridTemplateColumns: `repeat(${widthRow}, 50px)`
+                gridTemplateRows: `repeat(${heightColumn}, ${boxSize})`,
+                gridTemplateColumns: `repeat(${widthRow}, ${boxSize})`
             },
             color: this.state.color
         }));
@@ -85,31 +87,48 @@ class PatternMaker extends React.Component{
             gridCss: {
                 display: 'grid',
                 justifyContent: 'center',
-                gridTemplateRows: `repeat(${heightColumn}, 50px)`,
-                gridTemplateColumns: `repeat(${widthRow}, 50px)`
+                gridTemplateRows: `repeat(${heightColumn}, ${boxSize})`,
+                gridTemplateColumns: `repeat(${widthRow}, ${boxSize})`
             },
             color: this.state.color
         }));
     }
 
-    handleChangeComplete = (color) => {
-        this.setState({ background: color.hex });
-      };
+    handleChangeCompleteOne = (color) => {
+        this.setState({ background1: color.hex });
+    };
 
     render(){
-
         return( 
             <div>
-                <main>
-                    <div className="add-subtract-boxes">
-                    <p onClick={this.addWidth}>+</p><h1>{this.state.wide}</h1><p onClick={this.removeWidth}>-</p>
-                    <p onClick={this.addHeight}>+</p><h1>{this.state.hi}</h1><p onClick={this.removeHeight}>-</p>
+                <main className="pattern-maker-main">
+                    <div className="print-title">Owen Bean Pixel Art Creator</div>
+                    <div className="creating-pattern-actions">
+                        <div className="add-remove-buttons">
+                            <h2># of Columns</h2>
+                            <p onClick={this.addWidth}>+</p><h1>{this.state.wide}</h1><p onClick={this.removeWidth}>-</p>
+                        </div>
+                        <div className="color-picker-container">
+                            <h2>Color Picker</h2>
+                            <BlockPicker className="color-picker"
+                                style={{zIndex: '1'}}
+                                color={ this.state.background1 }
+                                onChangeComplete={ this.handleChangeCompleteOne }
+                                triangle="hide"
+                                width='300px'
+                                colors={[
+                                    '#FFFFFF','#C0C0C0', '#808080', '#000000', '#FF0000', '#FFA500','#FFD700',	'#800000', '#FFFF00', '#808000', 
+                                    '#00FF00', '#008000', '#00FFFF', '#008080', '#0000FF', '#000080', '#FF00FF', '#800080'
+                                ]}
+                                />
+                        </div>
+                        <div className="add-remove-buttons">
+                            <h2># of Rows</h2>
+                            <p onClick={this.addHeight}>+</p><h1>{this.state.hi}</h1><p onClick={this.removeHeight}>-</p>
+                        </div>
                     </div>
-                    <GithubPicker className="color-picker"
-        color={ this.state.background }
-        onChangeComplete={ this.handleChangeComplete }/>
                     <div style={this.state.gridCss}>
-                        <GridBox amountWide={this.state.wide} amountHeight={this.state.hi} color={this.state.background}/>
+                        <GridBox className="gridboxes" amountWide={this.state.wide} amountHeight={this.state.hi} color1={this.state.background1}/>
                     </div>
                 </main>
             </div>
